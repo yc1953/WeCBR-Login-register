@@ -252,7 +252,7 @@ input[type="email"] , input[type="password"]{
     transform: translate(-50%, -50%);
     background-color: white;
     z-index: 2;
-    overflow: scroll;
+    border-radius: 20px;
 }
 
 .to-display a {
