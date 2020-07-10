@@ -261,6 +261,7 @@ input[type="email"] , input[type="password"]{
     background-color: white;
     z-index: 2;
     border-radius: 20px;
+    overflow: scroll;
 }
 
 .to-display h4 {
@@ -334,6 +335,7 @@ input[type="email"] , input[type="password"]{
     .to-display {
         width: 60%;
         height: 50%;
+        overflow: scroll;
     }
 
     .to-display h4 {
