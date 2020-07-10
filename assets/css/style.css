@@ -31,6 +31,7 @@ input:focus {
     outline: none;
     border-bottom: 4px solid #0099ff;
 }
+
 input::placeholder {
     color: #777777;
 }
@@ -174,6 +175,10 @@ input[type="email"] , input[type="password"]{
     float: none;
 }
 
+.fa-arrow-circle-right:before {
+    display: none;
+}
+
 /*Start Register Style*/
 .register {
     float: left;
@@ -238,12 +243,15 @@ input[type="email"] , input[type="password"]{
 
 .forgot-password i {
     position: absolute;
-    left: 90%;
+    left: 12%;
+    top: 10%;
     font-size: 2rem;
+    color: #0099ff;
+    cursor: pointer;
 }
 
 .to-display {
-    padding: 3%;
+    padding: 5%;
     width: 40%;
     height: 70%;
     position: absolute;
@@ -255,15 +263,10 @@ input[type="email"] , input[type="password"]{
     border-radius: 20px;
 }
 
-.to-display a {
-    display: inline-block;
-    width: 100%;
-}
-
 .to-display h4 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 15%;
+    margin: 15% 2%;
 }
 
 .to-display button {
@@ -295,6 +298,7 @@ input[type="email"] , input[type="password"]{
     .container {
         width: 95%;
     }
+
     .register {
         display: none;
     }
@@ -326,10 +330,38 @@ input[type="email"] , input[type="password"]{
     .head-ing {
         font-size: 35px;
     }
-    
+
     .to-display {
-        width: 70%;
-        overflow: scroll;
+        width: 60%;
+        height: 50%;
+    }
+
+    .to-display h4 {
+        font-size: 1.5rem;
+    }
+
+    .forgot-password i {
+        position: absolute;
+        left: 8%;
+        top: 5%;
+        font-size: 2rem;
+    }
+
+    .to-display button {
+        width: 65%;
+        font-size: 1rem;
+        margin-left: 15%;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .to-display button:focus {
+        outline: none;
+    }
+
+    .to-display button:hover {
+        width: 65%;
+        border-radius: 5px;
     }
 }
 
@@ -341,5 +373,23 @@ input[type="email"] , input[type="password"]{
 
     .register h2 {
         font-size: 30px;
+    }
+
+    .to-display button {
+        width: 70%;
+        font-size: 1.2rem;
+        margin-left: 15%;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .to-display button:focus {
+        outline: none;
+    }
+
+    .to-display button:hover {
+        width: 70%;
+        font-size: 1.3rem;
+        border-radius: 5px;
     }
 }
