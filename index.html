@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container shadow">
         <div class="register">
             <div class="container">
                 <img src="assets/css/logo.png" class="logo">
@@ -26,10 +26,12 @@
             <div class="container login-toggle">
                 <img src="assets/css/logo.png" class="logo-login">
                 <h2 class="head-ing">LOG IN</h2>
-                <input type="email" placeholder="&#xF0E0;  Email">
-                <input type="password" placeholder="&#xf023;  Password"><br>
-                <a href="#" class="forgot">Forgot password?</a>
-                <button class="button-login">Log In</button>
+                <form action="/login" method="post">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password"><br>
+                    <a href="#" class="forgot">Forgot password?</a>
+                    <button class="button-login">Log In</button>
+                </form>
                 <div class="register-login">
                     <hr>
                     <h2 class="heading-toggle">Not Registered!</h2>
@@ -40,20 +42,22 @@
             <div class="container register-toggle">
                 <img src="assets/css/logo.png" class="logo-login">
                 <h2 class="head-ing">Register Here</h2>
-                <input type="text" placeholder="&#xf007;  First Name">
-                <input type="text" placeholder="&#xf007;  Last Name">
-                <input type="email" placeholder="&#xF0E0;  Email">
-                <input type="text" placeholder="&#xf879;  Whatsapp Number">
-                <label for="profile">&#xf03e; &shy; &shy; Profile Photo</label>
-                <input type="file" id="profile" placeholder="Profile Photo">
-                <input type="text" placeholder="&#xf19d;  College Name">
-                <label for="coll-logo">&#xf19c; &shy; &shy; College Logo</label>
-                <input type="file" id="coll-logo" placeholder="College Logo">
-                <label for="coll-id">&#xf2c2; &shy; &shy; College ID</label>
-                <input type="file" id="coll-id" placeholder="College ID">
-                <input type="password" placeholder="&#xf023;  Password">
-                <input type="password" placeholder="&#xf023;  Confirm Password"><br>
-                <button class="button-login">Register</button>
+                <form action="/register" method="post">
+                    <input type="text" name="fName" placeholder="First Name">
+                    <input type="text" name="lName" placeholder="Last Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="wNumber" placeholder="Whatsapp Number" pattern="[1-9]{1}[0-9]{9}">
+                    <label for="profile">Profile Photo</label>
+                    <input type="file" name="pPhoto" id="profile" placeholder="Profile Photo">
+                    <input type="text" name="collegeName" placeholder="College Name">
+                    <label for="coll-logo">College Logo</label>
+                    <input type="file" name="collegeLogo" id="coll-logo" placeholder="College Logo">
+                    <label for="coll-id">College ID</label>
+                    <input type="file" name="collegeLogo" id="coll-id" placeholder="College ID">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Confirm Password"><br>
+                    <button class="button-login">Register <i class="fas fa-arrow-circle-right"></i></button>
+                </form>
                 <div class="register-login">
                     <hr>
                     <h2>Already Registered!</h2>
@@ -68,7 +72,7 @@
             <a href="#" class="close-it"><i class="fas fa-times"></i></a>
             <h4 class="head-ing"><span>Password Recovery</span></h4>
             <div class="send">
-                <input type="text" placeholder="&#xf879;  Phone Number">
+                <input type="text" placeholder="Phone Number">
                 <button class="button-login send-otp">Send OTP</button>
             </div>
             <div class="validate">
@@ -77,8 +81,8 @@
                 <button class="button-login validate-otp">Validate OTP</button>
             </div>
             <div class="newpass">
-                <input type="password" placeholder="&#xf023;  New Password">
-                <input type="password" placeholder="&#xf023;  Confirm Password"><br>
+                <input type="password" placeholder="New Password">
+                <input type="password" placeholder="Confirm Password"><br>
                 <button class="button-login done">Done <i class="fas fa-arrow-circle-right"></i></button>
             </div>
         </div>
@@ -86,7 +90,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
-</body></html>
+</body>
+
+</html>
 
 
 
