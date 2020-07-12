@@ -21,8 +21,8 @@ input {
     width: 100%;
     margin: 2% 0;
     padding: 1%;
-    font-family: 'Montserrat', sans-serif, "Font Awesome 5 Free";
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     border: none;
     border-bottom: 2px solid #9a9a9a;
 }
@@ -37,13 +37,13 @@ input::placeholder {
 }
 
 label {
-    font-family: 'Montserrat', sans-serif, "Font Awesome 5 Free";
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
     float: left;
     margin-bottom: -10px;
     margin-left: 1%;
     margin-top: 2%;
-    font-weight: 700;
+    font-weight: 500;
     color: #777777;
 }
 
@@ -51,7 +51,7 @@ label {
     width: 90%;
     margin: auto;
     padding: 20px;
-    height: 100%
+    height: 100%;
 }
 
 .logo {
@@ -261,7 +261,6 @@ input[type="email"] , input[type="password"]{
     background-color: white;
     z-index: 2;
     border-radius: 20px;
-    overflow: scroll;
 }
 
 .to-display h4 {
@@ -296,6 +295,9 @@ input[type="email"] , input[type="password"]{
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        font-size: 0.8rem;    
+    }
     .container {
         width: 95%;
     }
@@ -335,7 +337,81 @@ input[type="email"] , input[type="password"]{
     .to-display {
         width: 60%;
         height: 50%;
+    }
+
+    .to-display h4 {
+        font-size: 1.5rem;
+    }
+
+    .forgot-password i {
+        position: absolute;
+        left: 8%;
+        top: 5%;
+        font-size: 2rem;
+    }
+
+    .to-display button {
+        width: 65%;
+        font-size: 1rem;
+        margin-left: 15%;
+        text-align: center;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .to-display button:focus {
+        outline: none;
+    }
+
+    .to-display button:hover {
+        width: 65%;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (width: 1024px) {
+    body {
+        font-size: 1.5rem;    
+    }
+    
+    .container {
+        width: 95%;
+    }
+
+    .register {
+        display: none;
+    }
+
+    .login {
+        width: 100%;
         overflow: scroll;
+        padding: 20px 0;
+    }
+
+    .register-login {
+        display: block;
+    }
+
+    hr {
+        border-top: 4px dotted #0099ff;
+    }
+
+    .register-login h2 {
+        font-size: 25px;
+    }
+
+    .logo-login {
+        width: 70%;
+        margin: auto;
+        display: block;
+    }
+
+    .head-ing {
+        font-size: 35px;
+    }
+
+    .to-display {
+        width: 60%;
+        height: 50%;
     }
 
     .to-display h4 {
